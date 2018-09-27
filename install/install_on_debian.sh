@@ -9,8 +9,7 @@ if [[ $UID -ne 0 ]]; then
 fi
 
 # Install essetials including nodejs and libraries
-apt-get update
-apt-get install -y build-essential git curl vim
+apt-get install -y build-essential git vim
 curl -sL https://deb.nodesource.com/setup_8.x | bash -
 apt-get install -y nodejs libfontconfig
 
