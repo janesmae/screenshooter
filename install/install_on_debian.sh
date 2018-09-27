@@ -17,4 +17,10 @@ apt-get install -y nodejs libfontconfig
 # Create user
 useradd -s /bin/bash -m -d /home/screenshooter -c screenshooter screenshooter
 
-
+# Download project
+cat <<-EOC | su - screenshooter
+	git clone https://github.com/janesmae/screenshooter.git ~/screenshooter
+	cd ~/screenshooter
+	npm install phantomjs
+	nohup node src/app.js > logs/access.log 2> logs/error.log
+EOC
