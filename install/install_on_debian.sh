@@ -22,5 +22,5 @@ cat <<-EOC | su - screenshooter
 	git clone https://github.com/janesmae/screenshooter.git ~/screenshooter
 	cd ~/screenshooter
 	npm install phantomjs
-	nohup node src/app.js > logs/access.log 2> logs/error.log
+	nohup node src/app.js > logs/access.log 2> logs/error.log &
 EOC
